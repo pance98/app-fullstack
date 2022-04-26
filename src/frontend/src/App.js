@@ -223,7 +223,7 @@ function App() {
             </Content>
             <Footer style={{textAlign: 'center'}}>
                 <Divider>
-                    <h4>2022-C</h4>
+                    <h4>2022-Cop</h4>
                 </Divider>
             </Footer>
         </Layout>
