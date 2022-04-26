@@ -223,7 +223,7 @@
                                 <goals>
                                     <goal>npm</goal>
                                 </goals>
-                                
+
                             </execution>
                             <execution>
                                 <id>npm run build</id>
