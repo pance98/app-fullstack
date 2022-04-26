@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   backend:
-    image: "encap02/springboot-react-fullstack:26.4.2022.16.59.26"
+    image: "encap02/springboot-react-fullstack:26.4.2022.18.26.19"
     ports:
       - "8080:8080"
     restart: "always"
