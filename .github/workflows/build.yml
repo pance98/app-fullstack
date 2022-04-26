@@ -35,4 +35,4 @@ jobs:
       - name: Change permissions
         run: chmod +x ./mvnw
       - name: Maven Clean install
-        run: ./mvnw  clean install -P build-frontend
+        run: ./mvnw --no-transfer-progress clean install -P build-frontend
