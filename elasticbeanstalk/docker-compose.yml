@@ -3,7 +3,7 @@ services:
   backend:
     image: "encap02/springboot-react-fullstack:26.4.2022.6.55.17"
     ports:
-      - "8080:8080"
+      - "80:8080"
     restart: "always"
     environment:
      - "SPRING_PROFILES_ACTIVE=dev"
