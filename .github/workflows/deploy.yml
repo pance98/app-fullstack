@@ -9,9 +9,9 @@ on:
 env:
   # Postgres
   POSTGRESQL_VERSION: latest
-  POSTGRESQL_DB: postgres
-  POSTGRESQL_USER: postgres
-  POSTGRESQL_PASSWORD: postgres
+  POSTGRESQL_DB: ebdb
+  POSTGRESQL_USER: encap02
+  POSTGRESQL_PASSWORD: password123
   # Java
   JAVA_VERSION: 11
   # DockerHub
