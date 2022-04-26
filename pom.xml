@@ -76,7 +76,6 @@
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>2.5.2</version>
                 <configuration>
-
                     <container>
                         <ports>
                             <port>8080</port>
@@ -133,7 +132,7 @@
                                     </to>
                                 </configuration>
                                 <goals>
-                                    <goal>dockerBuild</goal>
+                                    <goal>build</goal>
                                 </goals>
                             </execution>
                         </executions>
@@ -224,13 +223,14 @@
                                 <goals>
                                     <goal>npm</goal>
                                 </goals>
-
+                                
                             </execution>
                             <execution>
                                 <id>npm run build</id>
                                 <goals>
                                     <goal>npm</goal>
                                 </goals>
+
 
                             </execution>
                         </executions>
