@@ -17,7 +17,7 @@ env:
   # DockerHub
   DOCKER_HUB_USERNAME: encap02
   # AWS & Elastic Bean Stalk
-  AWS_REGION: eu-south-1
+
   EB_ENVIRONMENT_NAME: Fullstackapp-env
   EB_APPLICATION_NAME: fullstack-app
   EB_DEPLOYMENT_PACKAGE: elasticbeanstalk/docker-compose.yml
@@ -96,16 +96,16 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       - name: Beanstalk Deploy
-        uses: einaregilsson/beanstalk-deploy@ebe3476a4ce991d54336935e75e78dd9d86f9408
+        uses: einaregilsson/beanstalk-deploy@v20
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          region: ${{ env.AWS_REGION }}
           environment_name: ${{ env.EB_ENVIRONMENT_NAME }}
           application_name: ${{ env.EB_APPLICATION_NAME }}
           deployment_package: ${{ env.EB_DEPLOYMENT_PACKAGE }}
           version_label: ${{ steps.build-number.outputs.BUILD_NUMBER }}
           version_description: Version ${{steps.build-number.outputs.BUILD_NUMBER}} deployed via github actions ${{ github.sha }}
+          region: eu-south-1
           wait_for_deployment: 60
       - uses: 8398a7/action-slack@v3
         with:
