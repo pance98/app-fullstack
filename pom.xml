@@ -74,7 +74,7 @@
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>jib-maven-plugin</artifactId>
-                <version>2.5.2</version>
+                <version>3.2.1</version>
                 <configuration>
                     <container>
                         <ports>
@@ -97,7 +97,7 @@
                     <plugin>
                         <groupId>com.google.cloud.tools</groupId>
                         <artifactId>jib-maven-plugin</artifactId>
-                        <version>2.5.2</version>
+                        <version>3.2.1</version>
                         <configuration>
 
                             <to>
@@ -150,7 +150,7 @@
                     <plugin>
                         <groupId>com.google.cloud.tools</groupId>
                         <artifactId>jib-maven-plugin</artifactId>
-                        <version>2.5.2</version>
+                        <version>3.2.1</version>
                         <configuration>
 
                             <to>
