@@ -18,8 +18,8 @@ env:
   DOCKER_HUB_USERNAME: encap02
   # AWS & Elastic Bean Stalk
 
-  EB_ENVIRONMENT_NAME: Fullstackapp-env
-  EB_APPLICATION_NAME: fullstack-app
+  EB_ENVIRONMENT_NAME: Appfullstack-env
+  EB_APPLICATION_NAME: app-fullstack
   EB_DEPLOYMENT_PACKAGE: elasticbeanstalk/docker-compose.yml
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:13.1
+        image: postgres:latest
         env:
           POSTGRES_DB: ${{ env.POSTGRESQL_DB }}
           POSTGRES_USER: ${{ env.POSTGRESQL_USER }}
@@ -105,13 +105,13 @@ jobs:
           deployment_package: ${{ env.EB_DEPLOYMENT_PACKAGE }}
           version_label: ${{ steps.build-number.outputs.BUILD_NUMBER }}
           version_description: Version ${{steps.build-number.outputs.BUILD_NUMBER}} deployed via github actions ${{ github.sha }}
-          region: eu-south-1
+          region: eu-central-1
           wait_for_deployment: 60
       - uses: 8398a7/action-slack@v3
         with:
           status: ${{ job.status }}
           fields: repo,message,commit,author,action,eventName,ref,workflow,job,took
-          text: ':tada: :arrow_right: http://fullstackapp-env.eba-ageuwwmg.eu-south-1.elasticbeanstalk.com/'
+          text: ':tada: :arrow_right: http://appfullstack-env.eba-sx2p9xgw.eu-central-1.elasticbeanstalk.com/'
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         if: always()
