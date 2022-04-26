@@ -231,7 +231,7 @@
                                 <goals>
                                     <goal>npm</goal>
                                 </goals>
-                              
+
                             </execution>
                         </executions>
                     </plugin>
